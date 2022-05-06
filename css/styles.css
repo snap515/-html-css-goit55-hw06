@@ -37,11 +37,14 @@ p {
     margin-block-end: 0px;
 }
 
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.brand-color {
+    color: var(--brand-color);
 }
 
 .container {
@@ -199,14 +202,16 @@ img {
 }
 
 .button {
-    display: inline-block;
+    display: block;
     width: 200px;
     height: 50px;
+    margin: 0 auto;
 
     color: var(--white-color);
     background-color: var(--brand-color);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: var(--brand-color);
 
     font-weight: 700;
     font-size: 16px;
@@ -703,4 +708,101 @@ img {
 .close-button:hover,
 .close-button:focus {
     border-color: var(--brand-color);
+}
+
+.form {
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+}
+
+.form-title {
+    margin-bottom: 12px;
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.form-field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field:not(:first-child) {
+    margin-top: 10px;
+}
+
+.form-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+.form-input {
+    margin-top: 4px;
+    padding-left: 42px;
+    width: 448px;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border-color var(--transition-timing-function) var(--transition-duration), outline-color var(--transition-timing-function) var(--transition-duration);
+}
+
+.form-input:focus-within,
+.form-comment:focus-within {
+    outline-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.input-icon {
+    position: absolute;
+    top: 55%;
+    left: 15px;
+
+    fill: var(--title-color);
+
+    transition: fill var(--transition-timing-function) var(--transition-duration);
+}
+
+.form-input:focus-within+.input-icon {
+    fill: var(--brand-color);
+}
+
+.form-comment {
+    margin-top: 4px;
+    padding: 12px 16px;
+    width: 448px;
+    height: 120px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    resize: none;
+
+    transition: border-color var(--transition-timing-function) var(--transition-duration), outline-color var(--transition-timing-function) var(--transition-duration);
+}
+
+.form-comment::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
