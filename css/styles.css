@@ -43,6 +43,11 @@ img {
     height: auto;
 }
 
+button {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -558,7 +563,16 @@ img {
 }
 
 .footer-button {
+    display: flex;
+    align-items: center;
     margin-left: 12px;
+}
+
+.footer-button-title {
+    margin-left: 29px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* Portfolio.html */
