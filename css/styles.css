@@ -43,10 +43,6 @@ img {
     height: auto;
 }
 
-.brand-color {
-    color: var(--brand-color);
-}
-
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -802,7 +798,41 @@ img {
 }
 
 .checkbox-text {
+    display: block;
+}
+
+.checkbox-link {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    color: var(--brand-color);
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.checkbox-icon {
+    margin-right: 8px;
+    border-radius: 2px;
+    border: 2px solid var(--title-color);
+}
+
+.checkbox:checked+.checkbox-label>.checkbox-icon {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+    background-origin: border-box;
 }
