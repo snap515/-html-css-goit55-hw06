@@ -732,7 +732,7 @@ button {
 
     min-width: 528px;
     min-height: 581px;
-    padding: 17px;
+    padding: 40px;
 
     background-color: var(--white-color);
 
@@ -752,18 +752,12 @@ button {
     border-radius: 50%;
     cursor: pointer;
 
-    transition: border-color var(--transition-duration) var(--transition-timing-function);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .close-button:hover,
 .close-button:focus {
-    border-color: var(--brand-color);
-}
-
-.form {
-    width: 528px;
-    height: 581px;
-    padding: 40px;
+    fill: var(--brand-color);
 }
 
 .form-title {
@@ -853,12 +847,13 @@ button {
 
 .checkbox-text {
     display: block;
-}
 
-.checkbox-link {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.checkbox-link {
     color: var(--brand-color);
 }
 
